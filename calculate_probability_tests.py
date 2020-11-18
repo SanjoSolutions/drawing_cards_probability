@@ -1,6 +1,6 @@
 import unittest
 
-from calculate_probability import calculate_probability
+from calculate_probability import calculate_probability, calculate_probability_for_having_cards_drawn_after_draws
 
 
 class Test(unittest.TestCase):
@@ -37,6 +37,21 @@ class Test(unittest.TestCase):
         self.assertEqual(
             expected_result,
             result
+        )
+
+    def test_calculate_probability_for_having_cards_drawn_after_draws(self):
+        deck = [1, 2]
+        cards_having_drawn_at_turns = {
+            1: [1],
+            2: [2]
+        }
+        probability = calculate_probability_for_having_cards_drawn_after_draws(
+            deck,
+            cards_having_drawn_at_turns
+        )
+        self.assertEqual(
+            0.5,
+            probability
         )
 
 

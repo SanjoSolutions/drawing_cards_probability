@@ -1,42 +1,10 @@
 from calculate_probability import calculate_probability
-
-deck = [
-    1,
-    2,
-    2,
-    3,
-    3,
-    4,
-    4,
-    5,
-    5,
-    6,
-    6,
-    7,
-    7,
-    8,
-    8,
-    9,
-    9,
-    10,
-    10,
-    11,
-    12,
-    13,
-    13,
-    14,
-    14,
-    15,
-    15,
-    16,
-    17,
-    18
-]
+from hearthstone.deck import deck
 
 A = 9  # Aldrachi Warblades
 B = 3  # Twin Slice
 C = 5  # Chaos Strike
-D = 18  # Il'gynoth
+D = 12  # Il'gynoth
 
 cards_having_drawn = [
     A,

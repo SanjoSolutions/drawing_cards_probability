@@ -8,6 +8,13 @@ def calculate_probability(deck, cards_to_draw, total_number_of_cards_to_draw):
     return result
 
 
+def calculate_probability_for_having_cards_drawn_after_draws(deck, cards_having_drawn_after_draws):
+    probability = 1
+    for number_of_draws, cards_having_drawn in cards_having_drawn_after_draws.items():
+        probability *= calculate_probability(deck, cards_having_drawn, number_of_draws)
+    return probability
+
+
 def verify_that_all_cards_are_in_deck(deck, cards):
     if not all_cards_are_in_deck(deck, cards):
         raise AssertionError('Some cards are not in deck. Therefore all cards cannot be drawn from deck.')
